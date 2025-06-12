@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow & Grace - Modern Beauty Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Glow & Grace</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Unleash Your Inner Glow</h1>
+            <p>Experience luxury beauty treatments that transform and rejuvenate your natural radiance</p>
+            <a href="#contact" class="cta-button">Book Appointment</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <h2 class="section-title">Our Premium Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h3>Haircut & Styling</h3>
+                <p>Expert cuts and creative styling to enhance your unique beauty and personality</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>Facial Treatments</h3>
+                <p>Rejuvenating facials using premium products for glowing, healthy skin</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Makeup Artistry</h3>
+                <p>Professional makeup for special occasions and everyday glamour</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Spa Treatments</h3>
+                <p>Relaxing and therapeutic treatments for complete wellness and rejuvenation</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-hand-sparkles"></i>
+                </div>
+                <h3>Nail Care</h3>
+                <p>Manicures and pedicures with the latest trends and nail art designs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <h2 class="section-title">Our Beautiful Work</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=400&fit=crop" alt="Hairstyling">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=400&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=400&fit=crop" alt="Makeup">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=400&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&h=400&fit=crop" alt="Nails">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1559599101-f09722fb4948?w=400&h=400&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?w=400&h=400&fit=crop" alt="Spa">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=400&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400&h=400&fit=crop" alt="Beauty Treatment">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&h=400&fit=crop')">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&h=400&fit=crop" alt="Salon Interior">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+    
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <h2 class="section-title">About Glow & Grace</h2>
+        <div class="about-content">
+            <p>At Glow & Grace, we believe that beauty is an art form and every client is our canvas. With over a decade of experience in the beauty industry, our team of skilled professionals is dedicated to enhancing your natural beauty while providing a luxurious and relaxing experience. We use only the finest products and latest techniques to ensure you leave feeling confident, refreshed, and absolutely radiant.</p>
+        </div>
+        <div class="staff-grid">
+            <div class="staff-card">
+                <div class="staff-photo">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>Sarah Johnson</h3>
+                <p class="staff-role">Master Stylist & Owner</p>
+            </div>
+            <div class="staff-card">
+                <div class="staff-photo">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>Emma Davis</h3>
+                <p class="staff-role">Esthetician & Spa Specialist</p>
+            </div>
+            <div class="staff-card">
+                <div class="staff-photo">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>Maria Rodriguez</h3>
+                <p class="staff-role">Makeup Artist</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Book Your Appointment</h2>
+        <div class="contact-content">
+            <form class="contact-form" id="appointment-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Type</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="haircut">Haircut & Styling</option>
+                        <option value="facial">Facial Treatment</option>
+                        <option value="makeup">Makeup Artistry</option>
+                        <option value="spa">Spa Treatment</option>
+                        <option value="nails">Nail Care</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Any special requests or questions?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-envelope"></i> info@glowandgrace.com</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e15a187%3A0x82fcb4b8b7d8b7e4!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Glow & Grace</h3>
+                <p>Your premier destination for luxury beauty treatments and exceptional service.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>123 Beauty Street<br>Glamour City, GC 12345<br>(555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid #444; padding-top: 2rem; margin-top: 2rem;">
+            <p>&copy; 2025 Glow & Grace Beauty Salon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chat-toggle" id="chat-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="chatbox" id="chatbox">
+            <div class="chat-header">
+                <h4>Beauty Assistant</h4>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot">
+                    Hello! I'm your beauty assistant. How can I help you today? 💄✨
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..." maxlength="500">
+                <button class="chat-send" id="chat-send">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
